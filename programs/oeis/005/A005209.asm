@@ -3,23 +3,15 @@
 
 mov $1,$0
 lpb $0
-  add $3,7318
-  mov $4,$1
+  mov $3,$1
   mul $1,2
-  mov $6,$0
-  cmp $6,0
-  add $0,$6
-  mod $4,$0
+  mov $2,$0
+  cmp $2,0
+  add $0,$2
+  mod $3,$0
   sub $0,1
-  sub $1,$4
+  sub $1,$3
 lpe
-add $0,101357
-pow $3,0
-add $2,$3
-mov $3,1
-mov $3,$1
 div $1,2
 mul $1,2
 add $1,1
-pow $4,2
-mov $5,10
