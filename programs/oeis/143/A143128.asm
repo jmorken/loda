@@ -8,9 +8,10 @@ lpb $2
   mov $0,$4
   sub $2,1
   sub $0,$2
+  cal $0,76835 ; Coefficients in expansion of Eisenstein series -q*E'_2.
   mov $3,$0
+  sub $3,24
+  div $3,24
   add $3,1
-  cal $0,203 ; a(n) = sigma(n), the sum of the divisors of n. Also called sigma_1(n).
-  mul $3,$0
   add $1,$3
 lpe
