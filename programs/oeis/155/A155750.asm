@@ -8,56 +8,30 @@ lpb $29
   mov $0,$27
   sub $29,1
   add $0,$29
-  sub $0,1
-  mul $0,2
-  mov $2,1
-  mov $5,3
-  cal $0,90459 ; Duplicate of A090417.
   add $0,1
-  mov $2,-2
-  sub $5,$0
+  mul $0,2
+  add $1,1
+  sub $0,$1
   mov $26,$0
   cmp $26,0
   add $0,$26
+  div $1,$0
   mov $1,$0
-  sub $2,$0
-  div $5,$0
-  mul $0,2
-  sub $5,6
-  sub $2,$5
-  add $1,$2
-  mul $1,3
-  add $1,2470
-  mov $5,$2
-  mov $2,0
-  mov $3,0
-  sub $3,$1
-  mul $1,$0
+  sub $0,1
+  max $0,0
+  mul $1,10
+  sub $1,1
+  mov $2,1
+  cal $0,154115 ; Numbers n such that n + 3 is prime.
+  mul $1,2
+  mov $5,$1
   mov $1,$0
-  mul $0,2
-  mov $1,10
-  mov $26,$3
-  cmp $26,0
-  add $3,$26
-  sub $3,293401
-  mul $3,$5
-  mov $1,$3
-  trn $2,$3
-  sub $2,2
-  add $4,194920
-  sub $5,$0
   mov $30,$29
-  lpb $30
-    mov $28,$1
-    sub $30,1
-  lpe
+  cmp $30,1
+  mul $30,$0
+  add $28,$30
 lpe
-lpb $27
-  mov $27,0
-  sub $28,$1
-lpe
+min $27,1
+mul $27,$1
 mov $1,$28
-sub $1,1183532
-div $1,591766
-mul $1,2
-add $1,4
+sub $1,$27
