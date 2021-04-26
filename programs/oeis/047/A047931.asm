@@ -1,30 +1,27 @@
 ; A047931: Number of new penny-penny contacts when putting pennies on a table following a spiral pattern.
 ; 0,1,2,2,2,2,3,2,2,3,2,3,2,3,2,3,2,3,3,2,3,2,3,3,2,3,3,2,3,3,2,3,3,2,3,3,3,2,3,3,2,3,3,3,2,3,3,3,2,3,3,3,2,3,3,3,2,3,3,3,3,2,3,3,3,2,3,3,3,3,2,3,3,3,3,2,3,3,3,3,2,3,3,3,3,2,3,3,3,3,3
 
-mov $4,$0
-mov $6,2
-lpb $6
-  clr $0,4
-  mov $0,$4
-  sub $6,1
-  add $0,$6
+mov $6,$0
+mov $8,2
+lpb $8
+  clr $0,6
+  mov $0,$6
+  sub $8,1
+  add $0,$8
   sub $0,1
-  add $3,3
-  mul $0,$3
-  mov $2,1
-  cal $0,277 ; 3*n - 2*floor(sqrt(4*n+5)) + 5.
   add $2,$0
-  mov $1,$2
-  mov $7,$6
-  lpb $7
-    mov $5,$1
-    sub $7,1
+  lpb $0
+    mov $2,$0
+    max $2,0
+    cal $2,47932 ; a(n) = floor(3*n-sqrt(12*n-3)).
+    mod $0,2
   lpe
+  mov $1,$2
+  mov $9,$8
+  mul $9,$2
+  add $7,$9
 lpe
-lpb $4
-  mov $4,0
-  sub $5,$1
-lpe
-mov $1,$5
-sub $1,3
-div $1,2
+min $6,1
+mul $6,$1
+mov $1,$7
+sub $1,$6
